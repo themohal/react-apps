@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import GetSnapShot from './GetSnapShot';
+import { useState } from 'react';
 
 function App() {
+  const [name, setName] = useState("Farjad")
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GetSnapShot data={name}/>
+      <button onClick={()=>setName("Farjad Ali")}>Click Me</button>
     </div>
   );
 }
